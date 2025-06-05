@@ -48,13 +48,13 @@ const Index = () => {
               <span 
                 className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent transition-transform duration-1000 ease-in-out"
                 style={{
-                  transform: `translateY(-${currentWordIndex * 100}%)`,
+                  transform: `translateY(-${currentWordIndex * 5}rem)`,
                 }}
               >
                 {animatedWords.map((word, index) => (
                   <span 
                     key={index} 
-                    className="block h-20 leading-tight flex items-center justify-center"
+                    className="block h-20 leading-tight flex items-center justify-center mb-4"
                   >
                     {word}
                   </span>
