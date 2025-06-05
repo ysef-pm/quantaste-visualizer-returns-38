@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
@@ -18,7 +19,7 @@ const Index = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWordIndex((prevIndex) => (prevIndex + 1) % animatedWords.length);
-    }, 5000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
