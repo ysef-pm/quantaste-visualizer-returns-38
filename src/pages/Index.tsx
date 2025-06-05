@@ -1,10 +1,13 @@
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Slider } from '@/components/ui/slider';
 
 const Index = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const animatedWords = ['Macro tilts', 'Steroids', 'Strategy', 'Statistics', 'Data'];
+  const [timeRange, setTimeRange] = useState([0, 5]); // Default to show all data
 
   // Sample data for the chart showing historical returns
   const chartData = [
@@ -15,6 +18,9 @@ const Index = () => {
     { year: '2023', quantaste: 98, sp500: 38 },
     { year: '2024', quantaste: 128, sp500: 48 },
   ];
+
+  // Filter chart data based on time range
+  const filteredChartData = chartData.slice(timeRange[0], timeRange[1] + 1);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -73,9 +79,9 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Historical Performance Comparison
           </h2>
-          <div className="h-96">
+          <div className="h-96 mb-8">
             <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={chartData}>
+              <LineChart data={filteredChartData}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#ffffff20" />
                 <XAxis 
                   dataKey="year" 
@@ -116,6 +122,33 @@ const Index = () => {
                 />
               </LineChart>
             </ResponsiveContainer>
+          </div>
+          
+          {/* Time Range Slider */}
+          <div className="space-y-4">
+            <div className="text-center">
+              <h3 className="text-lg font-semibold text-white mb-2">Time Range Filter</h3>
+              <p className="text-sm text-gray-300">
+                Showing data from {chartData[timeRange[0]].year} to {chartData[timeRange[1]].year}
+              </p>
+            </div>
+            <div className="px-4">
+              <Slider
+                value={timeRange}
+                onValueChange={setTimeRange}
+                max={chartData.length - 1}
+                min={0}
+                step={1}
+                className="w-full"
+              />
+              <div className="flex justify-between text-xs text-gray-400 mt-2 px-2">
+                {chartData.map((data, index) => (
+                  <span key={data.year} className={index === 0 || index === chartData.length - 1 ? '' : 'hidden sm:inline'}>
+                    {data.year}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
