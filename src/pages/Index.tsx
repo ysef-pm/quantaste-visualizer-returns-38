@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
@@ -44,23 +43,8 @@ const Index = () => {
         <div className="text-center mb-16">
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-4">
             Trade with{' '}
-            <span className="relative inline-block min-w-[400px] h-20 overflow-hidden">
-              <span 
-                className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent transition-transform duration-1000 ease-in-out"
-                style={{
-                  transform: `translateY(-${currentWordIndex * 80}px)`,
-                }}
-              >
-                {/* Duplicate words for smooth infinite scroll effect */}
-                {[...animatedWords, ...animatedWords].map((word, index) => (
-                  <span 
-                    key={index} 
-                    className="block h-20 leading-tight flex items-center justify-center"
-                  >
-                    {word}
-                  </span>
-                ))}
-              </span>
+            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent transition-all duration-500">
+              {animatedWords[currentWordIndex]}
             </span>{' '}
             but better.
           </h1>
