@@ -1,4 +1,6 @@
+
 import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const Index = () => {
@@ -43,8 +45,22 @@ const Index = () => {
         <div className="text-center mb-16">
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-4">
             Trade with{' '}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent transition-all duration-500">
-              {animatedWords[currentWordIndex]}
+            <span className="relative inline-block min-w-[400px] h-20 overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={currentWordIndex}
+                  initial={{ y: 80, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -80, opacity: 0 }}
+                  transition={{ 
+                    duration: 0.5, 
+                    ease: [0.25, 0.46, 0.45, 0.94] 
+                  }}
+                  className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent flex items-center justify-center"
+                >
+                  {animatedWords[currentWordIndex]}
+                </motion.span>
+              </AnimatePresence>
             </span>{' '}
             but better.
           </h1>
