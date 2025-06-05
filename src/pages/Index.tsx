@@ -4,7 +4,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 
 const Index = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const animatedWords = ['Macro tilts', 'Statistical advantage', 'Data', 'Strategy'];
+  const animatedWords = ['Macro tilts', 'Strategy', 'Statistical advantage', 'Data'];
 
   // Sample data for the chart showing historical returns
   const chartData = [
@@ -48,13 +48,14 @@ const Index = () => {
               <span 
                 className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent transition-transform duration-1000 ease-in-out"
                 style={{
-                  transform: `translateY(-${currentWordIndex * 5}rem)`,
+                  transform: `translateY(-${currentWordIndex * 80}px)`,
                 }}
               >
-                {animatedWords.map((word, index) => (
+                {/* Duplicate words for smooth infinite scroll effect */}
+                {[...animatedWords, ...animatedWords].map((word, index) => (
                   <span 
                     key={index} 
-                    className="block h-20 leading-tight flex items-center justify-center mb-4"
+                    className="block h-20 leading-tight flex items-center justify-center"
                   >
                     {word}
                   </span>
