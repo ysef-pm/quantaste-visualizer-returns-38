@@ -25,7 +25,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-black">
       {/* Header */}
       <div className="container mx-auto px-6 py-8">
         {/* Performance Metrics */}
@@ -44,9 +44,9 @@ const Index = () => {
         <div className="text-center mb-16">
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-4">
             Trade with{' '}
-            <span className="relative inline-block h-20 overflow-hidden">
+            <span className="relative inline-block min-w-[400px] h-20 overflow-hidden">
               <span 
-                className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse transition-transform duration-1000 ease-in-out"
+                className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent transition-transform duration-1000 ease-in-out"
                 style={{
                   transform: `translateY(-${currentWordIndex * 100}%)`,
                 }}
@@ -54,11 +54,7 @@ const Index = () => {
                 {animatedWords.map((word, index) => (
                   <span 
                     key={index} 
-                    className="block h-20 leading-tight"
-                    style={{
-                      transform: index === currentWordIndex ? 'scale(1.1)' : 'scale(1)',
-                      transition: 'transform 0.5s ease-in-out'
-                    }}
+                    className="block h-20 leading-tight flex items-center justify-center"
                   >
                     {word}
                   </span>
