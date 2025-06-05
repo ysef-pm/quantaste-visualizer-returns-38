@@ -1,11 +1,10 @@
-
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const Index = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const animatedWords = ['Macro tilts', 'Steroids', 'Strategy', 'Statistical advantage', 'Data'];
+  const animatedWords = ['Macro tilts', 'Steroids', 'Strategy', 'Statistics', 'Data'];
 
   // Sample data for the chart showing historical returns
   const chartData = [
