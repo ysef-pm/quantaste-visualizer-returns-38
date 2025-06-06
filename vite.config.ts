@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/quantaste-visualizer-returns-38/',
+  base: mode === 'production' ? '/quantaste-visualizer-returns-38/' : '/',
   server: {
     host: "::",
     port: 8080,
