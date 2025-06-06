@@ -18,22 +18,22 @@ const Index = () => {
   const investorImages = [
     {
       name: 'Warren Buffet',
-      image: '/WarrenBuffet.png',
+      image: 'WarrenBuffet.png',
       description: 'Value investing pioneer and CEO of Berkshire Hathaway'
     },
     {
       name: 'Ray Dalio',
-      image: '/RayDalio.png',
+      image: 'RayDalio.png',
       description: 'Founder of Bridgewater Associates and macroeconomic strategist'
     },
     {
       name: 'Cathie Wood',
-      image: '/CathieWood.png',
+      image: 'CathieWood.png',
       description: 'Founder of ARK Invest and disruptive innovation investor'
     },
     {
       name: 'Peter Lynch',
-      image: '/PeterLynch.png',
+      image: 'PeterLynch.png',
       description: 'Legendary fund manager of Fidelity Magellan Fund'
     }
   ];
