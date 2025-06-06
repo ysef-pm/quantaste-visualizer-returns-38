@@ -13,26 +13,26 @@ const Index = () => {
   const [currentInvestorIndex, setCurrentInvestorIndex] = useState(0);
   const famousInvestors = ['Warren Buffet', 'Ray Dalio', 'Cathie Wood', 'Peter Lynch'];
 
-  // Investor profile images - using GitHub repository URLs
+  // Investor profile images - using PUBLIC_URL
   const investorImages = [
     {
       name: 'Warren Buffet',
-      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/WarrenBuffet.png',
+      image: process.env.PUBLIC_URL + '/WarrenBuffet.png',
       description: 'Value investing pioneer and CEO of Berkshire Hathaway'
     },
     {
       name: 'Ray Dalio',
-      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/RayDalio.png',
+      image: process.env.PUBLIC_URL + '/RayDalio.png',
       description: 'Founder of Bridgewater Associates and macroeconomic strategist'
     },
     {
       name: 'Cathie Wood',
-      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/CathieWood.png',
+      image: process.env.PUBLIC_URL + '/CathieWood.png',
       description: 'Founder of ARK Invest and disruptive innovation investor'
     },
     {
       name: 'Peter Lynch',
-      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/PeterLynch.png',
+      image: process.env.PUBLIC_URL + '/PeterLynch.png',
       description: 'Legendary fund manager of Fidelity Magellan Fund'
     }
   ];
