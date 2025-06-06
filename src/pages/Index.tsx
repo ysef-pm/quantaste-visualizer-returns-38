@@ -102,31 +102,50 @@ const Index = () => {
             Learn From The Best Investors
           </h2>
           
-          <Carousel className="w-full max-w-4xl mx-auto">
-            <CarouselContent>
-              {investorImages.map((investor, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <div className="rounded-xl overflow-hidden bg-black/50 border border-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                      <div className="aspect-square overflow-hidden">
-                        <img 
-                          src={investor.image} 
-                          alt={investor.name}
-                          className="w-full h-full object-cover" 
-                        />
-                      </div>
-                      <div className="p-4">
-                        <h3 className="text-xl font-semibold text-white">{investor.name}</h3>
-                        <p className="text-sm text-gray-300 mt-2">{investor.description}</p>
-                      </div>
+          <div className="w-full max-w-4xl mx-auto relative h-[400px]">
+            <div className="overflow-hidden h-full">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentInvestorIndex}
+                  initial={{ x: 300, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: -300, opacity: 0 }}
+                  transition={{ 
+                    duration: 0.5, 
+                    ease: [0.25, 0.46, 0.45, 0.94] 
+                  }}
+                  className="w-full h-full flex justify-center"
+                >
+                  <div className="rounded-xl overflow-hidden bg-black/50 border border-white/10 w-full max-w-md">
+                    <div className="aspect-square overflow-hidden">
+                      <img 
+                        src={investorImages[currentInvestorIndex].image} 
+                        alt={investorImages[currentInvestorIndex].name}
+                        className="w-full h-full object-cover" 
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-xl font-semibold text-white">{investorImages[currentInvestorIndex].name}</h3>
+                      <p className="text-sm text-gray-300 mt-2">{investorImages[currentInvestorIndex].description}</p>
                     </div>
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-0 bg-black/50 text-white border-white/20" />
-            <CarouselNext className="right-0 bg-black/50 text-white border-white/20" />
-          </Carousel>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+            
+            <button 
+              className="absolute top-1/2 -left-2 -translate-y-1/2 bg-black/50 text-white border-white/20 h-8 w-8 rounded-full flex items-center justify-center"
+              onClick={() => setCurrentInvestorIndex((prev) => (prev === 0 ? famousInvestors.length - 1 : prev - 1))}
+            >
+              ←
+            </button>
+            <button 
+              className="absolute top-1/2 -right-2 -translate-y-1/2 bg-black/50 text-white border-white/20 h-8 w-8 rounded-full flex items-center justify-center"
+              onClick={() => setCurrentInvestorIndex((prev) => (prev + 1) % famousInvestors.length)}
+            >
+              →
+            </button>
+          </div>
         </div>
 
         {/* Call to Action */}
