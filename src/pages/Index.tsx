@@ -72,7 +72,7 @@ const Index = () => {
         <div className="text-center mb-20 mt-8">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
             Trade Like{' '}
-            <span className="relative inline-block w-[240px] md:w-[280px] h-16 overflow-hidden">
+            <span className="relative inline-block w-auto min-w-[300px] md:min-w-[320px] h-16 overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={currentInvestorIndex}
@@ -83,7 +83,7 @@ const Index = () => {
                     duration: 0.5, 
                     ease: [0.25, 0.46, 0.45, 0.94] 
                   }}
-                  className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent flex items-center justify-center"
+                  className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent flex items-center justify-center whitespace-nowrap"
                 >
                   {famousInvestors[currentInvestorIndex]}
                 </motion.span>
