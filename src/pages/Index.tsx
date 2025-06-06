@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -12,33 +11,28 @@ import {
 
 const Index = () => {
   const [currentInvestorIndex, setCurrentInvestorIndex] = useState(0);
-  const famousInvestors = ['Warren Buffet', 'Ray Dalio', 'Marc Andreessen', 'Cathie Wood', 'Peter Lynch'];
+  const famousInvestors = ['Warren Buffet', 'Ray Dalio', 'Cathie Wood', 'Peter Lynch'];
 
-  // Investor profile images
+  // Investor profile images - updated to use local files
   const investorImages = [
     {
       name: 'Warren Buffet',
-      image: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=774&auto=format&fit=crop',
+      image: 'Warren Buffet.png',
       description: 'Value investing pioneer and CEO of Berkshire Hathaway'
     },
     {
       name: 'Ray Dalio',
-      image: 'https://images.unsplash.com/photo-1511216335778-7cb8f49fa7a3?q=80&w=870&auto=format&fit=crop',
+      image: 'Ray Dalio.png',
       description: 'Founder of Bridgewater Associates and macroeconomic strategist'
     },
     {
-      name: 'Marc Andreessen',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=774&auto=format&fit=crop',
-      description: 'Venture capitalist and co-founder of Andreessen Horowitz'
-    },
-    {
       name: 'Cathie Wood',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=776&auto=format&fit=crop',
+      image: 'cathie Wood.png',
       description: 'Founder of ARK Invest and disruptive innovation investor'
     },
     {
       name: 'Peter Lynch',
-      image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=869&auto=format&fit=crop',
+      image: 'Peter Lynch.png',
       description: 'Legendary fund manager of Fidelity Magellan Fund'
     }
   ];
