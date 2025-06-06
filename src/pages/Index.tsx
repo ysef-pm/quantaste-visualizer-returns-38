@@ -7,26 +7,26 @@ const Index = () => {
   const [currentInvestorIndex, setCurrentInvestorIndex] = useState(0);
   const famousInvestors = ['Warren Buffet', 'Ray Dalio', 'Cathie Wood', 'Peter Lynch'];
 
-  // Updated investor profile images using the uploaded comic-style images
+  // Updated investor profile images using relative paths for better GitHub Pages compatibility
   const investorImages = [
     {
       name: 'Warren Buffet',
-      image: '/lovable-uploads/010234de-5b31-42c2-a97a-14cb0f0e4d7c.png',
+      image: './lovable-uploads/010234de-5b31-42c2-a97a-14cb0f0e4d7c.png',
       description: 'Value investing pioneer and CEO of Berkshire Hathaway'
     },
     {
       name: 'Ray Dalio',
-      image: '/lovable-uploads/d54ec088-d7bc-46b6-b749-ced5761ed6bf.png',
+      image: './lovable-uploads/d54ec088-d7bc-46b6-b749-ced5761ed6bf.png',
       description: 'Founder of Bridgewater Associates and macroeconomic strategist'
     },
     {
       name: 'Cathie Wood',
-      image: '/lovable-uploads/92274601-5b00-4081-b5d0-fc9d1f17a6fd.png',
+      image: './lovable-uploads/92274601-5b00-4081-b5d0-fc9d1f17a6fd.png',
       description: 'Founder of ARK Invest and disruptive innovation investor'
     },
     {
       name: 'Peter Lynch',
-      image: '/lovable-uploads/9ea95764-20a7-4d2c-90bc-ff93df242d73.png',
+      image: './lovable-uploads/9ea95764-20a7-4d2c-90bc-ff93df242d73.png',
       description: 'Legendary fund manager of Fidelity Magellan Fund'
     }
   ];
