@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -19,22 +17,22 @@ const Index = () => {
   const investorImages = [
     {
       name: 'Warren Buffet',
-      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/Warren%20Buffet.png',
+      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/WarrenBuffet.png',
       description: 'Value investing pioneer and CEO of Berkshire Hathaway'
     },
     {
       name: 'Ray Dalio',
-      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/Ray%20Dalio.png',
+      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/RayDalio.png',
       description: 'Founder of Bridgewater Associates and macroeconomic strategist'
     },
     {
       name: 'Cathie Wood',
-      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/cathie%20Wood.png',
+      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/CathieWood.png',
       description: 'Founder of ARK Invest and disruptive innovation investor'
     },
     {
       name: 'Peter Lynch',
-      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/Peter%20Lynch.png',
+      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/PeterLynch.png',
       description: 'Legendary fund manager of Fidelity Magellan Fund'
     }
   ];
