@@ -68,11 +68,11 @@ const Index = () => {
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">
-        {/* Animated Headline - Moved up */}
+        {/* Animated Headline - Adjusted for better fit */}
         <div className="text-center mb-20 mt-8">
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-4">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
             Trade Like{' '}
-            <span className="relative inline-block min-w-[400px] h-20 overflow-hidden">
+            <span className="relative inline-block w-[240px] md:w-[280px] h-16 overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={currentInvestorIndex}
