@@ -14,7 +14,7 @@ const Index = () => {
   const [currentInvestorIndex, setCurrentInvestorIndex] = useState(0);
   const famousInvestors = ['Warren Buffet', 'Ray Dalio', 'Cathie Wood', 'Peter Lynch'];
 
-  // Investor profile images - using actual images from public folder
+  // Investor profile images - using actual images from public folder with absolute paths
   const investorImages = [
     {
       name: 'Warren Buffet',
@@ -116,7 +116,8 @@ const Index = () => {
                       <img 
                         src={investorImages[currentInvestorIndex].image} 
                         alt={investorImages[currentInvestorIndex].name}
-                        className="w-full h-full object-cover" 
+                        className="w-full h-full object-cover"
+                        key={`${currentInvestorIndex}-${investorImages[currentInvestorIndex].image}`}
                       />
                     </div>
                     <div className="p-4">
