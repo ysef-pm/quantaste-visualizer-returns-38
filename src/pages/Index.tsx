@@ -46,7 +46,7 @@ const Index = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentInvestorIndex((prevIndex) => (prevIndex + 1) % famousInvestors.length);
-    }, 2000);
+    }, 5000); // Changed from 2000 to 5000 (5 seconds)
 
     return () => clearInterval(interval);
   }, []);
@@ -83,7 +83,7 @@ const Index = () => {
                     duration: 0.5, 
                     ease: [0.25, 0.46, 0.45, 0.94] 
                   }}
-                  className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent flex items-center justify-center whitespace-nowrap"
+                  className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent flex items-center justify-center whitespace-nowrap text-4xl md:text-5xl"
                 >
                   {famousInvestors[currentInvestorIndex]}
                 </motion.span>
