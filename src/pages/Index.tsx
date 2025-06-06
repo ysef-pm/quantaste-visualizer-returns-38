@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -51,7 +52,7 @@ const Index = () => {
       <header className="container mx-auto px-6 py-6 flex justify-between items-center">
         <div className="text-white text-xl font-bold">Quantaste</div>
         <div className="flex space-x-4">
-          <Button variant="outline" className="text-white border-white hover:bg-white/10">
+          <Button variant="default" className="bg-gray-800 text-white hover:bg-gray-700">
             Log In
           </Button>
           <Button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700">
