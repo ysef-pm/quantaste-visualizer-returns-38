@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -14,26 +13,26 @@ const Index = () => {
   const [currentInvestorIndex, setCurrentInvestorIndex] = useState(0);
   const famousInvestors = ['Warren Buffet', 'Ray Dalio', 'Cathie Wood', 'Peter Lynch'];
 
-  // Investor profile images - using actual images from public folder with absolute paths
+  // Investor profile images - using relative paths that work with Vite base configuration
   const investorImages = [
     {
       name: 'Warren Buffet',
-      image: '/Warren Buffet.png',
+      image: 'Warren Buffet.png',
       description: 'Value investing pioneer and CEO of Berkshire Hathaway'
     },
     {
       name: 'Ray Dalio',
-      image: '/Ray Dalio.png',
+      image: 'Ray Dalio.png',
       description: 'Founder of Bridgewater Associates and macroeconomic strategist'
     },
     {
       name: 'Cathie Wood',
-      image: '/cathie Wood.png',
+      image: 'cathie Wood.png',
       description: 'Founder of ARK Invest and disruptive innovation investor'
     },
     {
       name: 'Peter Lynch',
-      image: '/Peter Lynch.png',
+      image: 'Peter Lynch.png',
       description: 'Legendary fund manager of Fidelity Magellan Fund'
     }
   ];
