@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -14,26 +15,26 @@ const Index = () => {
   const [currentInvestorIndex, setCurrentInvestorIndex] = useState(0);
   const famousInvestors = ['Warren Buffet', 'Ray Dalio', 'Cathie Wood', 'Peter Lynch'];
 
-  // Investor profile images - using hardcoded base path for production
+  // Investor profile images - using GitHub repository URLs
   const investorImages = [
     {
       name: 'Warren Buffet',
-      image: '/quantaste-visualizer-returns-38/Warren Buffet.png',
+      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/Warren%20Buffet.png',
       description: 'Value investing pioneer and CEO of Berkshire Hathaway'
     },
     {
       name: 'Ray Dalio',
-      image: '/quantaste-visualizer-returns-38/Ray Dalio.png',
+      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/Ray%20Dalio.png',
       description: 'Founder of Bridgewater Associates and macroeconomic strategist'
     },
     {
       name: 'Cathie Wood',
-      image: '/quantaste-visualizer-returns-38/cathie Wood.png',
+      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/cathie%20Wood.png',
       description: 'Founder of ARK Invest and disruptive innovation investor'
     },
     {
       name: 'Peter Lynch',
-      image: '/quantaste-visualizer-returns-38/Peter Lynch.png',
+      image: 'https://github.com/ysef-pm/quantaste-visualizer-returns-38/raw/main/public/Peter%20Lynch.png',
       description: 'Legendary fund manager of Fidelity Magellan Fund'
     }
   ];
